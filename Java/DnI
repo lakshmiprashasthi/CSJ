@@ -1,0 +1,9 @@
+public class PersonalInfo {
+    public static void main(String[] args) {
+        String name = "Name";
+        int age = 18;
+        String language = "Java";
+
+        System.out.println("My name is " + name + ", I am " + age + " years old, and the language I chose is " + language + ".");
+    }
+}
