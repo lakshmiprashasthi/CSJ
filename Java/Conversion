@@ -1,0 +1,24 @@
+public class TypeConversionDemo {
+    public static void main(String[] args) {
+        float floatValue = 12.75f;
+        int intFromFloat = (int) floatValue;  
+
+        System.out.println("Original float value: " + floatValue);
+        System.out.println("Converted to int: " + intFromFloat);
+
+        System.out.println();
+
+        int intValue = 42;
+        double doubleFromInt = intValue; 
+
+        System.out.println("Original int value: " + intValue);
+        System.out.println("Converted to double: " + doubleFromInt);
+    }
+}
+
+/*Sample Output:
+Original float value: 12.75
+Converted to int: 12
+
+Original int value: 42
+Converted to double: 42.0*/
