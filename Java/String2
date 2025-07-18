@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class StringManipulation {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+
+        System.out.println("\nLength of string: " + input.length());
+        if (!input.isEmpty()) {
+            System.out.println("First character: " + input.charAt(0));
+            System.out.println("Last character: " + input.charAt(input.length() - 1));
+        }
+        System.out.println("Uppercase version: " + input.toUpperCase());
+
+        System.out.print("\nEnter first string: ");
+        String str1 = scanner.nextLine();
+
+        System.out.print("Enter second string: ");
+        String str2 = scanner.nextLine();
+
+        String resultPlus = str1 + " " + str2;
+        System.out.println("\nConcatenated using '+': " + resultPlus);
+
+        String resultConcat = str1.concat(" ").concat(str2);
+        System.out.println("Concatenated using 'concat()': " + resultConcat);
+
+        scanner.close();
+    }
+}
