@@ -1,0 +1,68 @@
+class Book {
+    String title;
+    String author;
+    int year;
+
+    public Book(String title, String author, int year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
+
+    public void displayBook() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Year: " + year);
+        System.out.println("------------------------");
+    }
+}
+
+class Student {
+    private String name;
+    private int rollNumber;
+    private char grade;
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getRollNumber() {
+        return rollNumber;
+    }
+    public void setRollNumber(int rollNumber) {
+        this.rollNumber = rollNumber;
+    }
+
+    public char getGrade() {
+        return grade;
+    }
+    public void setGrade(char grade) {
+        this.grade = grade;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Book book1 = new Book("The Alchemist", "Paulo Coelho", 1988);
+        Book book2 = new Book("Wings of Fire", "A.P.J. Abdul Kalam", 1999);
+
+        System.out.println("Book 1 Details:");
+        book1.displayBook();
+
+        System.out.println("Book 2 Details:");
+        book2.displayBook();
+        Student student = new Student();
+        student.setName("Sithakoka");
+        student.setRollNumber(101);
+        student.setGrade('A');
+
+        System.out.println("Student Details:");
+        System.out.println("Name: " + student.getName());
+        System.out.println("Roll Number: " + student.getRollNumber());
+        System.out.println("Grade: " + student.getGrade());
+    }
+}
