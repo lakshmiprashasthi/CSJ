@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class StringReplaceAndSplit {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a sentence: ");
+        String sentence = scanner.nextLine();
+
+        String withHyphens = sentence.replace(" ", "-");
+        System.out.println("\nSentence with spaces replaced by hyphens:");
+        System.out.println(withHyphens);
+
+        System.out.println("\nWords in the sentence:");
+        String[] words = sentence.split(" ");
+        for (String word : words) {
+            System.out.println(word);
+        }
+
+        scanner.close();
+    }
+}
