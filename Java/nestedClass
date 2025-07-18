@@ -1,0 +1,20 @@
+public class Outer {
+
+    private class Inner {
+        public String displayMessage() {
+            return "Hello from the Inner class!";
+        }
+    }
+
+    public String getInnerMessage() {
+        Inner innerObj = new Inner();  
+        return innerObj.displayMessage();
+    }
+
+    public static void main(String[] args) {
+        Outer outerObj = new Outer();
+        
+        String message = outerObj.getInnerMessage();
+        System.out.println(message);
+    }
+}
