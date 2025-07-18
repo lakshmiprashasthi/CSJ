@@ -1,0 +1,64 @@
+class Person {
+    String name;
+    int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+class Employee extends Person {
+    String employeeID;
+    double salary;
+
+    public Employee(String name, int age, String employeeID, double salary) {
+        super(name, age); // Call Person's constructor
+        this.employeeID = employeeID;
+        this.salary = salary;
+    }
+
+    public void displayDetails() {
+        System.out.println("Employee Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Employee ID: " + employeeID);
+        System.out.println("Salary: ₹" + salary);
+        System.out.println("-----------------------------");
+    }
+}
+
+class Vehicle {
+    public void start() {
+        System.out.println("Vehicle is starting...");
+    }
+}
+
+class Car extends Vehicle {
+    @Override
+    public void start() {
+        System.out.println("Car is starting with a key ignition.");
+    }
+}
+
+class Bike extends Vehicle {
+    @Override
+    public void start() {
+        System.out.println("Bike is starting with a kick or self-start.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Employee emp = new Employee("Sithakoka", 25, "EMP102", 45000);
+        emp.displayDetails();
+
+        Vehicle myCar = new Car();
+        Vehicle myBike = new Bike();
+
+        System.out.println("Vehicle Test:");
+        myCar.start();  
+        myBike.start(); 
+    }
+}
