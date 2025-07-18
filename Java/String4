@@ -1,0 +1,28 @@
+public class StringUtilities {
+
+    public static int countWords(String sentence) {
+        if (sentence == null || sentence.trim().isEmpty()) {
+            return 0;
+        }
+        String[] words = sentence.trim().split("\\s+"); // split by one or more spaces
+        return words.length;
+    }
+
+    public static String reverseString(String s) {
+        StringBuilder reversed = new StringBuilder(s);
+        return reversed.reverse().toString();
+    }
+
+    public static void main(String[] args) {
+        String sentence = "Java is powerful";
+        String toReverse = "hello";
+
+        int wordCount = countWords(sentence);
+        System.out.println("Sentence: " + sentence);
+        System.out.println("Word count: " + wordCount);
+
+        String reversed = reverseString(toReverse);
+        System.out.println("\nOriginal: " + toReverse);
+        System.out.println("Reversed: " + reversed);
+    }
+}
