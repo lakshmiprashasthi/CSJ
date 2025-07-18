@@ -1,0 +1,28 @@
+public class MethodOverloadingExample {
+
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public double multiply(double a, double b) {
+        return a * b;
+    }
+
+    public void greet() {
+        System.out.println("Hello!");
+    }
+
+    public void greet(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+
+    public static void main(String[] args) {
+        MethodOverloadingExample obj = new MethodOverloadingExample();
+
+        System.out.println("Multiplying integers: " + obj.multiply(3, 4));
+        System.out.println("Multiplying doubles: " + obj.multiply(2.5, 4.2));
+
+        obj.greet();                 // Outputs: Hello!
+        obj.greet("Sithakoka");      // Outputs: Hello, Sithakoka!
+    }
+}
