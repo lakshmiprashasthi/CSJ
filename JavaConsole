@@ -1,12 +1,1 @@
-import java.time.LocalDate;
 
-public class EventReminder {
-    public static void main(String[] args) {
-        Event myEvent = new Event(
-            "Team Meeting",
-            "Discuss Q3 goals and product features",
-            LocalDate.of(2025, 7, 20)
-        );
-        System.out.println(myEvent.toDetailedString());
-    }
-}
